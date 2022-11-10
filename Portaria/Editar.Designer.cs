@@ -51,6 +51,7 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.tsbEditar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -69,7 +70,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -302,6 +302,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(785, 180);
             this.panel2.TabIndex = 49;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(341, 79);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 88;
             // 
             // pictureBox2
             // 
@@ -484,13 +492,6 @@
             this.label8.Size = new System.Drawing.Size(48, 13);
             this.label8.TabIndex = 57;
             this.label8.Text = "CPF/RG";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(341, 79);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 88;
             // 
             // Editar
             // 

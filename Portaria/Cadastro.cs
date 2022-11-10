@@ -19,7 +19,7 @@ namespace Portaria
     public partial class Cadastro : Form
     {
         public byte[] FOTO { get; set; }
-        string connectionString = @"Data Source=DESKTOP-1BCGEJD;Initial Catalog=BDCADASTRO;Integrated Security=True";
+        string connectionString = @"Data Source=DESKTOP-6TOVA5C\SQLEXPRESS;Initial Catalog=BDCADASTRO;Integrated Security=True";
         Conexão con = new Conexão();
         bool novo;
         string g;

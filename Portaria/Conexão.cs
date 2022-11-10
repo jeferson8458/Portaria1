@@ -9,8 +9,8 @@ namespace Portaria
 {
     class Conexão
     {
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-1BCGEJD;Initial Catalog=BDCADASTRO;Integrated Security=True");
-        string connectionString = @"Data Source=DESKTOP-1BCGEJD;Initial Catalog=BDCADASTRO;Integrated Security=True";
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-6TOVA5C\SQLEXPRESS;Initial Catalog=BDCADASTRO;Integrated Security=True");
+        string connectionString = @"Data Source=DESKTOP-6TOVA5C\SQLEXPRESS;Initial Catalog=BDCADASTRO;Integrated Security=True";
         SqlCommand cmd;
         public string VERIFICAR(string CPF)
         {

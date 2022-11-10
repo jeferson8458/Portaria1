@@ -18,8 +18,8 @@ namespace Portaria
 
     public partial class Home : Form
     {
-        string connectionString = @"Data Source=DESKTOP-1BCGEJD;Initial Catalog=Login;Integrated Security=True";
-        SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-1BCGEJD;Initial Catalog=Login;Integrated Security=True");
+        string connectionString = @"Data Source=DESKTOP-6TOVA5C\SQLEXPRESS;Initial Catalog=Login;Integrated Security=True";
+        SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-6TOVA5C\SQLEXPRESS;Initial Catalog=Login;Integrated Security=True");
         SqlCommand cmd = new SqlCommand();
         bool novo21;
         bool novo;

@@ -14,12 +14,12 @@ namespace Portaria
 {
     public partial class ListaPresença : Form
     {
-        string connectionString = @"Data Source=DESKTOP-1BCGEJD;Initial Catalog=BDCADASTRO;Integrated Security=True";
+        string connectionString = @"Data Source=DESKTOP-6TOVA5C\SQLEXPRESS;Initial Catalog=BDCADASTRO;Integrated Security=True";
         bool novo4;
         bool jef = true;
         string g;
 
-        SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-1BCGEJD;Initial Catalog=BDCADASTRO;Integrated Security=True");
+        SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-6TOVA5C\SQLEXPRESS;Initial Catalog=BDCADASTRO;Integrated Security=True");
         SqlCommand cmd = new SqlCommand();
         public ListaPresença()
         {

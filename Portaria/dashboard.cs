@@ -16,9 +16,9 @@ namespace Portaria
 {
     public partial class dashboard : Form
     {
-        String connectionString = @"Data Source=DESKTOP-1BCGEJD;Initial Catalog=BDCADASTRO;Integrated Security=True";
-        SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-1BCGEJD;Initial Catalog=Login;Integrated Security=True");
-        SqlConnection cn2 = new SqlConnection(@"Data Source=DESKTOP-1BCGEJD;Initial Catalog=BDCADSATRO;Integrated Security=True");
+        String connectionString = @"Data Source=DESKTOP-6TOVA5C\SQLEXPRESS;Initial Catalog=BDCADASTRO;Integrated Security=True";
+        SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-6TOVA5C\SQLEXPRESS;Initial Catalog=Login;Integrated Security=True");
+        SqlConnection cn2 = new SqlConnection(@"Data Source=DESKTOP-6TOVA5C\SQLEXPRESS;Initial Catalog=BDCADSATRO;Integrated Security=True");
         string imgLocation="";
         SqlCommand cmd;
         SqlDataReader dr;

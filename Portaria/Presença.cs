@@ -18,13 +18,13 @@ namespace Portaria
     public partial class Presença : Form
     {
         public byte[] FOTO { get; set; }
-        string connectionString = @"Data Source=DESKTOP-1BCGEJD;Initial Catalog=BDCADASTRO;Integrated Security=True";
+        string connectionString = @"Data Source=DESKTOP-6TOVA5C\SQLEXPRESS;Initial Catalog=BDCADASTRO;Integrated Security=True";
         bool novo4;
         bool jef = true;
         string g;
         bool novo2;
 
-        SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-1BCGEJD;Initial Catalog=BDCADASTRO;Integrated Security=True");
+        SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-6TOVA5C\SQLEXPRESS;Initial Catalog=BDCADASTRO;Integrated Security=True");
         SqlCommand cmd = new SqlCommand();
         string imgLocation = "";
         private VideoCaptureDevice videoSource;

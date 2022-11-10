@@ -17,11 +17,11 @@ namespace Portaria
     public partial class Editar : Form
     {
         public byte[] FOTO { get; set; }
-        string connectionString = @"Data Source=DESKTOP-1BCGEJD;Initial Catalog=BDCADASTRO;Integrated Security=True";
+        string connectionString = @"Data Source=DESKTOP-6TOVA5C\SQLEXPRESS;Initial Catalog=BDCADASTRO;Integrated Security=True";
         bool novo2;
         string gender;
         string g;
-        SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-1BCGEJD;Initial Catalog=BDCADASTRO;Integrated Security=True");
+        SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-6TOVA5C\SQLEXPRESS;Initial Catalog=BDCADASTRO;Integrated Security=True");
         SqlCommand cmd = new SqlCommand();
         string imgLocation = "";
 
@@ -635,6 +635,11 @@ namespace Portaria
         private void dataGridView1_Scroll(object sender, ScrollEventArgs e)
         {
       
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
     }
