@@ -14,7 +14,7 @@ namespace Portaria
 {
     public partial class Login : Form
     {
-        string connectionString = @"Data Source=DESKTOP-1BCGEJD;Initial Catalog=Login;Integrated Security=True";
+        string connectionString = @"Data Source=DESKTOP-1BCGEJDSSS;Initial Catalog=Login;Integrated Security=True";
         SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-1BCGEJD;Initial Catalog=Login;Integrated Security=True");
         SqlCommand cmd = new SqlCommand();
         Conexão con = new Conexão();
