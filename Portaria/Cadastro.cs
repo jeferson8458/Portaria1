@@ -19,7 +19,7 @@ namespace Portaria
     public partial class Cadastro : Form
     {
         public byte[] FOTO { get; set; }
-        string connectionString = @"Data Source=DESKTOP-6TOVA5C\SQLEXPRESS;Initial Catalog=BDCADASTRO;Integrated Security=True";
+        string connectionString = @"Data SourceDESKTOP-6TOVA5C\SQLEXPRESS;Initial Catalog=BDCADASTRO;Integrated Security=True";
         Conexão con = new Conexão();
         bool novo;
         string g;
@@ -309,42 +309,7 @@ namespace Portaria
                 }
             }
 
-            if (textBox1.Text == comboSetor.Text) 
-            {
-                string sql = "INSERT INTO RECIBOS (NOME,CPF) " + "VALUES (@Nome, @Cpf)";
-
-                SqlConnection con = new SqlConnection(connectionString);
-                SqlCommand cmd = new SqlCommand(sql, con);
-                cmd.Parameters.AddWithValue("@Nome", txtNome.Text);
-                cmd.Parameters.AddWithValue("@Cpf", txtCPF.Text);
-
-                cmd.CommandType = CommandType.Text;
-                con.Open();
-
-                try
-                {
-                    int i = cmd.ExecuteNonQuery();
-                    if (i > 0) ;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro: " + ex.ToString());
-                }
-                finally
-                {
-                    con.Close();
-                }
-            }
-
-            else
-            {
-                MessageBox.Show("Tomou no Cu", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-
-            }
-
-
-
+          
             tsbNovo.Enabled = true;
             button2.Enabled = false;
             button4.Enabled = false;

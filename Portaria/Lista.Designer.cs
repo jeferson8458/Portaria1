@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.pRESENCABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.jEFERSON = new Portaria.JEFERSON();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
@@ -39,20 +36,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.pRESENCABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.jEFERSON = new Portaria.JEFERSON();
             this.pRESENCATableAdapter = new Portaria.JEFERSONTableAdapters.PRESENCATableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pRESENCABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jEFERSON)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pRESENCABindingSource
-            // 
-            this.pRESENCABindingSource.DataMember = "PRESENCA";
-            this.pRESENCABindingSource.DataSource = this.jEFERSON;
-            // 
-            // jEFERSON
-            // 
-            this.jEFERSON.DataSetName = "JEFERSON";
-            this.jEFERSON.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textBox3
             // 
@@ -113,9 +102,6 @@
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.pRESENCABindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Portaria.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 78);
             this.reportViewer1.Name = "reportViewer1";
@@ -123,6 +109,16 @@
             this.reportViewer1.Size = new System.Drawing.Size(776, 485);
             this.reportViewer1.TabIndex = 70;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
+            // 
+            // pRESENCABindingSource
+            // 
+            this.pRESENCABindingSource.DataMember = "PRESENCA";
+            this.pRESENCABindingSource.DataSource = this.jEFERSON;
+            // 
+            // jEFERSON
+            // 
+            this.jEFERSON.DataSetName = "JEFERSON";
+            this.jEFERSON.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pRESENCATableAdapter
             // 

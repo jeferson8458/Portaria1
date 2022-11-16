@@ -30,6 +30,7 @@ namespace Portaria
             label1.Text = "Usuário " + usuarioLogado;
             textBox1.Text = jef2;
             label2.Text = id;
+
         }
 
         public Home()
@@ -51,7 +52,14 @@ namespace Portaria
         private void Home_Load(object sender, EventArgs e)
         {
 
-            
+            if (label1.Text == "Usuário Admin")
+            {
+                button4.Visible = true;
+            }
+            else
+            {
+                button4.Visible = false;
+            }
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)

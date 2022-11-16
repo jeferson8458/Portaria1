@@ -20,17 +20,17 @@ namespace Portaria {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("BDCADASTRODataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("BDCADASTRODataSet2")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class BDCADASTRODataSet : global::System.Data.DataSet {
+    public partial class BDCADASTRODataSet2 : global::System.Data.DataSet {
         
-        private PRESENCADataTable tablePRESENCA;
+        private PORTARIADataTable tablePORTARIA;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public BDCADASTRODataSet() {
+        public BDCADASTRODataSet2() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Portaria {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected BDCADASTRODataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected BDCADASTRODataSet2(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Portaria {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["PRESENCA"] != null)) {
-                    base.Tables.Add(new PRESENCADataTable(ds.Tables["PRESENCA"]));
+                if ((ds.Tables["PORTARIA"] != null)) {
+                    base.Tables.Add(new PORTARIADataTable(ds.Tables["PORTARIA"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Portaria {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public PRESENCADataTable PRESENCA {
+        public PORTARIADataTable PORTARIA {
             get {
-                return this.tablePRESENCA;
+                return this.tablePORTARIA;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Portaria {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            BDCADASTRODataSet cln = ((BDCADASTRODataSet)(base.Clone()));
+            BDCADASTRODataSet2 cln = ((BDCADASTRODataSet2)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Portaria {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["PRESENCA"] != null)) {
-                    base.Tables.Add(new PRESENCADataTable(ds.Tables["PRESENCA"]));
+                if ((ds.Tables["PORTARIA"] != null)) {
+                    base.Tables.Add(new PORTARIADataTable(ds.Tables["PORTARIA"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Portaria {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablePRESENCA = ((PRESENCADataTable)(base.Tables["PRESENCA"]));
+            this.tablePORTARIA = ((PORTARIADataTable)(base.Tables["PORTARIA"]));
             if ((initTable == true)) {
-                if ((this.tablePRESENCA != null)) {
-                    this.tablePRESENCA.InitVars();
+                if ((this.tablePORTARIA != null)) {
+                    this.tablePORTARIA.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Portaria {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "BDCADASTRODataSet";
+            this.DataSetName = "BDCADASTRODataSet2";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/BDCADASTRODataSet.xsd";
+            this.Namespace = "http://tempuri.org/BDCADASTRODataSet2.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablePRESENCA = new PRESENCADataTable();
-            base.Tables.Add(this.tablePRESENCA);
+            this.tablePORTARIA = new PORTARIADataTable();
+            base.Tables.Add(this.tablePORTARIA);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializePRESENCA() {
+        private bool ShouldSerializePORTARIA() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Portaria {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            BDCADASTRODataSet ds = new BDCADASTRODataSet();
+            BDCADASTRODataSet2 ds = new BDCADASTRODataSet2();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,14 +270,14 @@ namespace Portaria {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void PRESENCARowChangeEventHandler(object sender, PRESENCARowChangeEvent e);
+        public delegate void PORTARIARowChangeEventHandler(object sender, PORTARIARowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class PRESENCADataTable : global::System.Data.TypedTableBase<PRESENCARow> {
+        public partial class PORTARIADataTable : global::System.Data.TypedTableBase<PORTARIARow> {
             
             private global::System.Data.DataColumn columnID;
             
@@ -293,14 +293,20 @@ namespace Portaria {
             
             private global::System.Data.DataColumn columnHORA;
             
-            private global::System.Data.DataColumn columnMES;
-            
             private global::System.Data.DataColumn columnFUNCAO;
+            
+            private global::System.Data.DataColumn columnGENDER;
+            
+            private global::System.Data.DataColumn columnFOTO;
+            
+            private global::System.Data.DataColumn columnPAGAMENTO;
+            
+            private global::System.Data.DataColumn columnVENCIMENTO;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PRESENCADataTable() {
-                this.TableName = "PRESENCA";
+            public PORTARIADataTable() {
+                this.TableName = "PORTARIA";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -308,7 +314,7 @@ namespace Portaria {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal PRESENCADataTable(global::System.Data.DataTable table) {
+            internal PORTARIADataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -325,7 +331,7 @@ namespace Portaria {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected PRESENCADataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected PORTARIADataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -388,17 +394,41 @@ namespace Portaria {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn MESColumn {
+            public global::System.Data.DataColumn FUNCAOColumn {
                 get {
-                    return this.columnMES;
+                    return this.columnFUNCAO;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn FUNCAOColumn {
+            public global::System.Data.DataColumn GENDERColumn {
                 get {
-                    return this.columnFUNCAO;
+                    return this.columnGENDER;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FOTOColumn {
+                get {
+                    return this.columnFOTO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PAGAMENTOColumn {
+                get {
+                    return this.columnPAGAMENTO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn VENCIMENTOColumn {
+                get {
+                    return this.columnVENCIMENTO;
                 }
             }
             
@@ -413,34 +443,34 @@ namespace Portaria {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PRESENCARow this[int index] {
+            public PORTARIARow this[int index] {
                 get {
-                    return ((PRESENCARow)(this.Rows[index]));
+                    return ((PORTARIARow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event PRESENCARowChangeEventHandler PRESENCARowChanging;
+            public event PORTARIARowChangeEventHandler PORTARIARowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event PRESENCARowChangeEventHandler PRESENCARowChanged;
+            public event PORTARIARowChangeEventHandler PORTARIARowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event PRESENCARowChangeEventHandler PRESENCARowDeleting;
+            public event PORTARIARowChangeEventHandler PORTARIARowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event PRESENCARowChangeEventHandler PRESENCARowDeleted;
+            public event PORTARIARowChangeEventHandler PORTARIARowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddPRESENCARow(PRESENCARow row) {
+            public void AddPORTARIARow(PORTARIARow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PRESENCARow AddPRESENCARow(string NOME, string CPF, string SETOR, string SOCIO, string DATAS, System.TimeSpan HORA, string MES, string FUNCAO) {
-                PRESENCARow rowPRESENCARow = ((PRESENCARow)(this.NewRow()));
+            public PORTARIARow AddPORTARIARow(string NOME, string CPF, string SETOR, string SOCIO, string DATAS, System.TimeSpan HORA, string FUNCAO, string GENDER, byte[] FOTO, string PAGAMENTO, string VENCIMENTO) {
+                PORTARIARow rowPORTARIARow = ((PORTARIARow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         NOME,
@@ -449,24 +479,27 @@ namespace Portaria {
                         SOCIO,
                         DATAS,
                         HORA,
-                        MES,
-                        FUNCAO};
-                rowPRESENCARow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowPRESENCARow);
-                return rowPRESENCARow;
+                        FUNCAO,
+                        GENDER,
+                        FOTO,
+                        PAGAMENTO,
+                        VENCIMENTO};
+                rowPORTARIARow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowPORTARIARow);
+                return rowPORTARIARow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PRESENCARow FindByID(int ID) {
-                return ((PRESENCARow)(this.Rows.Find(new object[] {
+            public PORTARIARow FindByID(int ID) {
+                return ((PORTARIARow)(this.Rows.Find(new object[] {
                             ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                PRESENCADataTable cln = ((PRESENCADataTable)(base.Clone()));
+                PORTARIADataTable cln = ((PORTARIADataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -474,7 +507,7 @@ namespace Portaria {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new PRESENCADataTable();
+                return new PORTARIADataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -487,8 +520,11 @@ namespace Portaria {
                 this.columnSOCIO = base.Columns["SOCIO"];
                 this.columnDATAS = base.Columns["DATAS"];
                 this.columnHORA = base.Columns["HORA"];
-                this.columnMES = base.Columns["MES"];
                 this.columnFUNCAO = base.Columns["FUNCAO"];
+                this.columnGENDER = base.Columns["GENDER"];
+                this.columnFOTO = base.Columns["FOTO"];
+                this.columnPAGAMENTO = base.Columns["PAGAMENTO"];
+                this.columnVENCIMENTO = base.Columns["VENCIMENTO"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -508,10 +544,16 @@ namespace Portaria {
                 base.Columns.Add(this.columnDATAS);
                 this.columnHORA = new global::System.Data.DataColumn("HORA", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHORA);
-                this.columnMES = new global::System.Data.DataColumn("MES", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMES);
                 this.columnFUNCAO = new global::System.Data.DataColumn("FUNCAO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFUNCAO);
+                this.columnGENDER = new global::System.Data.DataColumn("GENDER", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGENDER);
+                this.columnFOTO = new global::System.Data.DataColumn("FOTO", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFOTO);
+                this.columnPAGAMENTO = new global::System.Data.DataColumn("PAGAMENTO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPAGAMENTO);
+                this.columnVENCIMENTO = new global::System.Data.DataColumn("VENCIMENTO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVENCIMENTO);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -521,39 +563,41 @@ namespace Portaria {
                 this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
                 this.columnNOME.AllowDBNull = false;
-                this.columnNOME.MaxLength = 100;
+                this.columnNOME.MaxLength = 80;
                 this.columnCPF.MaxLength = 50;
                 this.columnSETOR.MaxLength = 50;
                 this.columnSOCIO.MaxLength = 50;
                 this.columnDATAS.MaxLength = 50;
-                this.columnMES.MaxLength = 50;
                 this.columnFUNCAO.MaxLength = 50;
+                this.columnGENDER.MaxLength = 50;
+                this.columnPAGAMENTO.MaxLength = 80;
+                this.columnVENCIMENTO.MaxLength = 80;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PRESENCARow NewPRESENCARow() {
-                return ((PRESENCARow)(this.NewRow()));
+            public PORTARIARow NewPORTARIARow() {
+                return ((PORTARIARow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new PRESENCARow(builder);
+                return new PORTARIARow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(PRESENCARow);
+                return typeof(PORTARIARow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.PRESENCARowChanged != null)) {
-                    this.PRESENCARowChanged(this, new PRESENCARowChangeEvent(((PRESENCARow)(e.Row)), e.Action));
+                if ((this.PORTARIARowChanged != null)) {
+                    this.PORTARIARowChanged(this, new PORTARIARowChangeEvent(((PORTARIARow)(e.Row)), e.Action));
                 }
             }
             
@@ -561,8 +605,8 @@ namespace Portaria {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.PRESENCARowChanging != null)) {
-                    this.PRESENCARowChanging(this, new PRESENCARowChangeEvent(((PRESENCARow)(e.Row)), e.Action));
+                if ((this.PORTARIARowChanging != null)) {
+                    this.PORTARIARowChanging(this, new PORTARIARowChangeEvent(((PORTARIARow)(e.Row)), e.Action));
                 }
             }
             
@@ -570,8 +614,8 @@ namespace Portaria {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.PRESENCARowDeleted != null)) {
-                    this.PRESENCARowDeleted(this, new PRESENCARowChangeEvent(((PRESENCARow)(e.Row)), e.Action));
+                if ((this.PORTARIARowDeleted != null)) {
+                    this.PORTARIARowDeleted(this, new PORTARIARowChangeEvent(((PORTARIARow)(e.Row)), e.Action));
                 }
             }
             
@@ -579,14 +623,14 @@ namespace Portaria {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.PRESENCARowDeleting != null)) {
-                    this.PRESENCARowDeleting(this, new PRESENCARowChangeEvent(((PRESENCARow)(e.Row)), e.Action));
+                if ((this.PORTARIARowDeleting != null)) {
+                    this.PORTARIARowDeleting(this, new PORTARIARowChangeEvent(((PORTARIARow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemovePRESENCARow(PRESENCARow row) {
+            public void RemovePORTARIARow(PORTARIARow row) {
                 this.Rows.Remove(row);
             }
             
@@ -595,7 +639,7 @@ namespace Portaria {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                BDCADASTRODataSet ds = new BDCADASTRODataSet();
+                BDCADASTRODataSet2 ds = new BDCADASTRODataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -613,7 +657,7 @@ namespace Portaria {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "PRESENCADataTable";
+                attribute2.FixedValue = "PORTARIADataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -657,25 +701,25 @@ namespace Portaria {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class PRESENCARow : global::System.Data.DataRow {
+        public partial class PORTARIARow : global::System.Data.DataRow {
             
-            private PRESENCADataTable tablePRESENCA;
+            private PORTARIADataTable tablePORTARIA;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal PRESENCARow(global::System.Data.DataRowBuilder rb) : 
+            internal PORTARIARow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablePRESENCA = ((PRESENCADataTable)(this.Table));
+                this.tablePORTARIA = ((PORTARIADataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int ID {
                 get {
-                    return ((int)(this[this.tablePRESENCA.IDColumn]));
+                    return ((int)(this[this.tablePORTARIA.IDColumn]));
                 }
                 set {
-                    this[this.tablePRESENCA.IDColumn] = value;
+                    this[this.tablePORTARIA.IDColumn] = value;
                 }
             }
             
@@ -683,10 +727,10 @@ namespace Portaria {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string NOME {
                 get {
-                    return ((string)(this[this.tablePRESENCA.NOMEColumn]));
+                    return ((string)(this[this.tablePORTARIA.NOMEColumn]));
                 }
                 set {
-                    this[this.tablePRESENCA.NOMEColumn] = value;
+                    this[this.tablePORTARIA.NOMEColumn] = value;
                 }
             }
             
@@ -695,14 +739,14 @@ namespace Portaria {
             public string CPF {
                 get {
                     try {
-                        return ((string)(this[this.tablePRESENCA.CPFColumn]));
+                        return ((string)(this[this.tablePORTARIA.CPFColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'CPF\' na tabela \'PRESENCA\' é DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'CPF\' na tabela \'PORTARIA\' é DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePRESENCA.CPFColumn] = value;
+                    this[this.tablePORTARIA.CPFColumn] = value;
                 }
             }
             
@@ -711,14 +755,14 @@ namespace Portaria {
             public string SETOR {
                 get {
                     try {
-                        return ((string)(this[this.tablePRESENCA.SETORColumn]));
+                        return ((string)(this[this.tablePORTARIA.SETORColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'SETOR\' na tabela \'PRESENCA\' é DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'SETOR\' na tabela \'PORTARIA\' é DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePRESENCA.SETORColumn] = value;
+                    this[this.tablePORTARIA.SETORColumn] = value;
                 }
             }
             
@@ -727,14 +771,14 @@ namespace Portaria {
             public string SOCIO {
                 get {
                     try {
-                        return ((string)(this[this.tablePRESENCA.SOCIOColumn]));
+                        return ((string)(this[this.tablePORTARIA.SOCIOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'SOCIO\' na tabela \'PRESENCA\' é DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'SOCIO\' na tabela \'PORTARIA\' é DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePRESENCA.SOCIOColumn] = value;
+                    this[this.tablePORTARIA.SOCIOColumn] = value;
                 }
             }
             
@@ -743,14 +787,14 @@ namespace Portaria {
             public string DATAS {
                 get {
                     try {
-                        return ((string)(this[this.tablePRESENCA.DATASColumn]));
+                        return ((string)(this[this.tablePORTARIA.DATASColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'DATAS\' na tabela \'PRESENCA\' é DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'DATAS\' na tabela \'PORTARIA\' é DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePRESENCA.DATASColumn] = value;
+                    this[this.tablePORTARIA.DATASColumn] = value;
                 }
             }
             
@@ -759,30 +803,14 @@ namespace Portaria {
             public System.TimeSpan HORA {
                 get {
                     try {
-                        return ((global::System.TimeSpan)(this[this.tablePRESENCA.HORAColumn]));
+                        return ((global::System.TimeSpan)(this[this.tablePORTARIA.HORAColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'HORA\' na tabela \'PRESENCA\' é DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'HORA\' na tabela \'PORTARIA\' é DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePRESENCA.HORAColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string MES {
-                get {
-                    try {
-                        return ((string)(this[this.tablePRESENCA.MESColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'MES\' na tabela \'PRESENCA\' é DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePRESENCA.MESColumn] = value;
+                    this[this.tablePORTARIA.HORAColumn] = value;
                 }
             }
             
@@ -791,99 +819,199 @@ namespace Portaria {
             public string FUNCAO {
                 get {
                     try {
-                        return ((string)(this[this.tablePRESENCA.FUNCAOColumn]));
+                        return ((string)(this[this.tablePORTARIA.FUNCAOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'FUNCAO\' na tabela \'PRESENCA\' é DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'FUNCAO\' na tabela \'PORTARIA\' é DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePRESENCA.FUNCAOColumn] = value;
+                    this[this.tablePORTARIA.FUNCAOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string GENDER {
+                get {
+                    try {
+                        return ((string)(this[this.tablePORTARIA.GENDERColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'GENDER\' na tabela \'PORTARIA\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePORTARIA.GENDERColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public byte[] FOTO {
+                get {
+                    try {
+                        return ((byte[])(this[this.tablePORTARIA.FOTOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'FOTO\' na tabela \'PORTARIA\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePORTARIA.FOTOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string PAGAMENTO {
+                get {
+                    try {
+                        return ((string)(this[this.tablePORTARIA.PAGAMENTOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'PAGAMENTO\' na tabela \'PORTARIA\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePORTARIA.PAGAMENTOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string VENCIMENTO {
+                get {
+                    try {
+                        return ((string)(this[this.tablePORTARIA.VENCIMENTOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'VENCIMENTO\' na tabela \'PORTARIA\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePORTARIA.VENCIMENTOColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsCPFNull() {
-                return this.IsNull(this.tablePRESENCA.CPFColumn);
+                return this.IsNull(this.tablePORTARIA.CPFColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetCPFNull() {
-                this[this.tablePRESENCA.CPFColumn] = global::System.Convert.DBNull;
+                this[this.tablePORTARIA.CPFColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsSETORNull() {
-                return this.IsNull(this.tablePRESENCA.SETORColumn);
+                return this.IsNull(this.tablePORTARIA.SETORColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetSETORNull() {
-                this[this.tablePRESENCA.SETORColumn] = global::System.Convert.DBNull;
+                this[this.tablePORTARIA.SETORColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsSOCIONull() {
-                return this.IsNull(this.tablePRESENCA.SOCIOColumn);
+                return this.IsNull(this.tablePORTARIA.SOCIOColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetSOCIONull() {
-                this[this.tablePRESENCA.SOCIOColumn] = global::System.Convert.DBNull;
+                this[this.tablePORTARIA.SOCIOColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsDATASNull() {
-                return this.IsNull(this.tablePRESENCA.DATASColumn);
+                return this.IsNull(this.tablePORTARIA.DATASColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetDATASNull() {
-                this[this.tablePRESENCA.DATASColumn] = global::System.Convert.DBNull;
+                this[this.tablePORTARIA.DATASColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsHORANull() {
-                return this.IsNull(this.tablePRESENCA.HORAColumn);
+                return this.IsNull(this.tablePORTARIA.HORAColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetHORANull() {
-                this[this.tablePRESENCA.HORAColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsMESNull() {
-                return this.IsNull(this.tablePRESENCA.MESColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetMESNull() {
-                this[this.tablePRESENCA.MESColumn] = global::System.Convert.DBNull;
+                this[this.tablePORTARIA.HORAColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsFUNCAONull() {
-                return this.IsNull(this.tablePRESENCA.FUNCAOColumn);
+                return this.IsNull(this.tablePORTARIA.FUNCAOColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetFUNCAONull() {
-                this[this.tablePRESENCA.FUNCAOColumn] = global::System.Convert.DBNull;
+                this[this.tablePORTARIA.FUNCAOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsGENDERNull() {
+                return this.IsNull(this.tablePORTARIA.GENDERColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetGENDERNull() {
+                this[this.tablePORTARIA.GENDERColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFOTONull() {
+                return this.IsNull(this.tablePORTARIA.FOTOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFOTONull() {
+                this[this.tablePORTARIA.FOTOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPAGAMENTONull() {
+                return this.IsNull(this.tablePORTARIA.PAGAMENTOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPAGAMENTONull() {
+                this[this.tablePORTARIA.PAGAMENTOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsVENCIMENTONull() {
+                return this.IsNull(this.tablePORTARIA.VENCIMENTOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetVENCIMENTONull() {
+                this[this.tablePORTARIA.VENCIMENTOColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -891,22 +1019,22 @@ namespace Portaria {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class PRESENCARowChangeEvent : global::System.EventArgs {
+        public class PORTARIARowChangeEvent : global::System.EventArgs {
             
-            private PRESENCARow eventRow;
+            private PORTARIARow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PRESENCARowChangeEvent(PRESENCARow row, global::System.Data.DataRowAction action) {
+            public PORTARIARowChangeEvent(PORTARIARow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PRESENCARow Row {
+            public PORTARIARow Row {
                 get {
                     return this.eventRow;
                 }
@@ -922,7 +1050,7 @@ namespace Portaria {
         }
     }
 }
-namespace Portaria.BDCADASTRODataSetTableAdapters {
+namespace Portaria.BDCADASTRODataSet2TableAdapters {
     
     
     /// <summary>
@@ -934,7 +1062,7 @@ namespace Portaria.BDCADASTRODataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class PRESENCATableAdapter : global::System.ComponentModel.Component {
+    public partial class PORTARIATableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -948,7 +1076,7 @@ namespace Portaria.BDCADASTRODataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public PRESENCATableAdapter() {
+        public PORTARIATableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1045,7 +1173,7 @@ namespace Portaria.BDCADASTRODataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "PRESENCA";
+            tableMapping.DataSetTable = "PORTARIA";
             tableMapping.ColumnMappings.Add("ID", "ID");
             tableMapping.ColumnMappings.Add("NOME", "NOME");
             tableMapping.ColumnMappings.Add("CPF", "CPF");
@@ -1053,12 +1181,15 @@ namespace Portaria.BDCADASTRODataSetTableAdapters {
             tableMapping.ColumnMappings.Add("SOCIO", "SOCIO");
             tableMapping.ColumnMappings.Add("DATAS", "DATAS");
             tableMapping.ColumnMappings.Add("HORA", "HORA");
-            tableMapping.ColumnMappings.Add("MES", "MES");
             tableMapping.ColumnMappings.Add("FUNCAO", "FUNCAO");
+            tableMapping.ColumnMappings.Add("GENDER", "GENDER");
+            tableMapping.ColumnMappings.Add("FOTO", "FOTO");
+            tableMapping.ColumnMappings.Add("PAGAMENTO", "PAGAMENTO");
+            tableMapping.ColumnMappings.Add("VENCIMENTO", "VENCIMENTO");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[PRESENCA] WHERE (([ID] = @Original_ID) AND ([NOME] = @Original_NOME) AND ((@IsNull_CPF = 1 AND [CPF] IS NULL) OR ([CPF] = @Original_CPF)) AND ((@IsNull_SETOR = 1 AND [SETOR] IS NULL) OR ([SETOR] = @Original_SETOR)) AND ((@IsNull_SOCIO = 1 AND [SOCIO] IS NULL) OR ([SOCIO] = @Original_SOCIO)) AND ((@IsNull_DATAS = 1 AND [DATAS] IS NULL) OR ([DATAS] = @Original_DATAS)) AND ((@IsNull_HORA = 1 AND [HORA] IS NULL) OR ([HORA] = @Original_HORA)) AND ((@IsNull_MES = 1 AND [MES] IS NULL) OR ([MES] = @Original_MES)) AND ((@IsNull_FUNCAO = 1 AND [FUNCAO] IS NULL) OR ([FUNCAO] = @Original_FUNCAO)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[PORTARIA] WHERE (([ID] = @Original_ID) AND ([NOME] = @Original_NOME) AND ((@IsNull_CPF = 1 AND [CPF] IS NULL) OR ([CPF] = @Original_CPF)) AND ((@IsNull_SETOR = 1 AND [SETOR] IS NULL) OR ([SETOR] = @Original_SETOR)) AND ((@IsNull_SOCIO = 1 AND [SOCIO] IS NULL) OR ([SOCIO] = @Original_SOCIO)) AND ((@IsNull_DATAS = 1 AND [DATAS] IS NULL) OR ([DATAS] = @Original_DATAS)) AND ((@IsNull_HORA = 1 AND [HORA] IS NULL) OR ([HORA] = @Original_HORA)) AND ((@IsNull_FUNCAO = 1 AND [FUNCAO] IS NULL) OR ([FUNCAO] = @Original_FUNCAO)) AND ((@IsNull_GENDER = 1 AND [GENDER] IS NULL) OR ([GENDER] = @Original_GENDER)) AND ((@IsNull_PAGAMENTO = 1 AND [PAGAMENTO] IS NULL) OR ([PAGAMENTO] = @Original_PAGAMENTO)) AND ((@IsNull_VENCIMENTO = 1 AND [VENCIMENTO] IS NULL) OR ([VENCIMENTO] = @Original_VENCIMENTO)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NOME", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -1072,14 +1203,18 @@ namespace Portaria.BDCADASTRODataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DATAS", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATAS", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_HORA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HORA", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MES", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MES", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MES", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MES", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FUNCAO", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FUNCAO", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FUNCAO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FUNCAO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GENDER", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GENDER", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GENDER", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GENDER", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PAGAMENTO", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAGAMENTO", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PAGAMENTO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAGAMENTO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_VENCIMENTO", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VENCIMENTO", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_VENCIMENTO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VENCIMENTO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[PRESENCA] ([NOME], [CPF], [SETOR], [SOCIO], [DATAS], [HORA], [MES], [FUNCAO]) VALUES (@NOME, @CPF, @SETOR, @SOCIO, @DATAS, @HORA, @MES, @FUNCAO);
-SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE (ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[PORTARIA] ([NOME], [CPF], [SETOR], [SOCIO], [DATAS], [HORA], [FUNCAO], [GENDER], [FOTO], [PAGAMENTO], [VENCIMENTO]) VALUES (@NOME, @CPF, @SETOR, @SOCIO, @DATAS, @HORA, @FUNCAO, @GENDER, @FOTO, @PAGAMENTO, @VENCIMENTO);
+SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, FUNCAO, GENDER, FOTO, PAGAMENTO, VENCIMENTO FROM PORTARIA WHERE (ID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NOME", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CPF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CPF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1087,12 +1222,15 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SOCIO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SOCIO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATAS", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATAS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HORA", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MES", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MES", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FUNCAO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FUNCAO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GENDER", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GENDER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FOTO", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FOTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PAGAMENTO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAGAMENTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VENCIMENTO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VENCIMENTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[PRESENCA] SET [NOME] = @NOME, [CPF] = @CPF, [SETOR] = @SETOR, [SOCIO] = @SOCIO, [DATAS] = @DATAS, [HORA] = @HORA, [MES] = @MES, [FUNCAO] = @FUNCAO WHERE (([ID] = @Original_ID) AND ([NOME] = @Original_NOME) AND ((@IsNull_CPF = 1 AND [CPF] IS NULL) OR ([CPF] = @Original_CPF)) AND ((@IsNull_SETOR = 1 AND [SETOR] IS NULL) OR ([SETOR] = @Original_SETOR)) AND ((@IsNull_SOCIO = 1 AND [SOCIO] IS NULL) OR ([SOCIO] = @Original_SOCIO)) AND ((@IsNull_DATAS = 1 AND [DATAS] IS NULL) OR ([DATAS] = @Original_DATAS)) AND ((@IsNull_HORA = 1 AND [HORA] IS NULL) OR ([HORA] = @Original_HORA)) AND ((@IsNull_MES = 1 AND [MES] IS NULL) OR ([MES] = @Original_MES)) AND ((@IsNull_FUNCAO = 1 AND [FUNCAO] IS NULL) OR ([FUNCAO] = @Original_FUNCAO)));
-SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[PORTARIA] SET [NOME] = @NOME, [CPF] = @CPF, [SETOR] = @SETOR, [SOCIO] = @SOCIO, [DATAS] = @DATAS, [HORA] = @HORA, [FUNCAO] = @FUNCAO, [GENDER] = @GENDER, [FOTO] = @FOTO, [PAGAMENTO] = @PAGAMENTO, [VENCIMENTO] = @VENCIMENTO WHERE (([ID] = @Original_ID) AND ([NOME] = @Original_NOME) AND ((@IsNull_CPF = 1 AND [CPF] IS NULL) OR ([CPF] = @Original_CPF)) AND ((@IsNull_SETOR = 1 AND [SETOR] IS NULL) OR ([SETOR] = @Original_SETOR)) AND ((@IsNull_SOCIO = 1 AND [SOCIO] IS NULL) OR ([SOCIO] = @Original_SOCIO)) AND ((@IsNull_DATAS = 1 AND [DATAS] IS NULL) OR ([DATAS] = @Original_DATAS)) AND ((@IsNull_HORA = 1 AND [HORA] IS NULL) OR ([HORA] = @Original_HORA)) AND ((@IsNull_FUNCAO = 1 AND [FUNCAO] IS NULL) OR ([FUNCAO] = @Original_FUNCAO)) AND ((@IsNull_GENDER = 1 AND [GENDER] IS NULL) OR ([GENDER] = @Original_GENDER)) AND ((@IsNull_PAGAMENTO = 1 AND [PAGAMENTO] IS NULL) OR ([PAGAMENTO] = @Original_PAGAMENTO)) AND ((@IsNull_VENCIMENTO = 1 AND [VENCIMENTO] IS NULL) OR ([VENCIMENTO] = @Original_VENCIMENTO)));
+SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, FUNCAO, GENDER, FOTO, PAGAMENTO, VENCIMENTO FROM PORTARIA WHERE (ID = @ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NOME", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CPF", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CPF", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1100,8 +1238,11 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SOCIO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SOCIO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATAS", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATAS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HORA", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MES", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MES", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FUNCAO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FUNCAO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GENDER", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GENDER", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FOTO", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FOTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PAGAMENTO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAGAMENTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VENCIMENTO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VENCIMENTO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NOME", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CPF", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CPF", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1114,10 +1255,14 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DATAS", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATAS", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_HORA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HORA", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MES", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MES", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MES", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MES", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FUNCAO", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FUNCAO", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FUNCAO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FUNCAO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_GENDER", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GENDER", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GENDER", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GENDER", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PAGAMENTO", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAGAMENTO", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PAGAMENTO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PAGAMENTO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_VENCIMENTO", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VENCIMENTO", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_VENCIMENTO", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VENCIMENTO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -1125,7 +1270,7 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Portaria.Properties.Settings.Default.BDCADASTROConnectionString;
+            this._connection.ConnectionString = global::Portaria.Properties.Settings.Default.BDCADASTROConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1134,24 +1279,17 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM dbo.PRESENCA wh" +
-                "ere PRESENCA.MES like \'%\'+@Mês+\'%\' ";
+            this._commandCollection[0].CommandText = "SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, FUNCAO, GENDER, FOTO, PAGAMENTO," +
+                " VENCIMENTO FROM dbo.PORTARIA";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Mês", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "MES", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(BDCADASTRODataSet.PRESENCADataTable dataTable, string Mês) {
+        public virtual int Fill(BDCADASTRODataSet2.PORTARIADataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((Mês == null)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Mês));
-            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -1163,15 +1301,9 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual BDCADASTRODataSet.PRESENCADataTable GetData(string Mês) {
+        public virtual BDCADASTRODataSet2.PORTARIADataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((Mês == null)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Mês));
-            }
-            BDCADASTRODataSet.PRESENCADataTable dataTable = new BDCADASTRODataSet.PRESENCADataTable();
+            BDCADASTRODataSet2.PORTARIADataTable dataTable = new BDCADASTRODataSet2.PORTARIADataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1179,15 +1311,15 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(BDCADASTRODataSet.PRESENCADataTable dataTable) {
+        public virtual int Update(BDCADASTRODataSet2.PORTARIADataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(BDCADASTRODataSet dataSet) {
-            return this.Adapter.Update(dataSet, "PRESENCA");
+        public virtual int Update(BDCADASTRODataSet2 dataSet) {
+            return this.Adapter.Update(dataSet, "PORTARIA");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1209,7 +1341,7 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, string Original_NOME, string Original_CPF, string Original_SETOR, string Original_SOCIO, string Original_DATAS, global::System.Nullable<global::System.TimeSpan> Original_HORA, string Original_MES, string Original_FUNCAO) {
+        public virtual int Delete(int Original_ID, string Original_NOME, string Original_CPF, string Original_SETOR, string Original_SOCIO, string Original_DATAS, global::System.Nullable<global::System.TimeSpan> Original_HORA, string Original_FUNCAO, string Original_GENDER, string Original_PAGAMENTO, string Original_VENCIMENTO) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
             if ((Original_NOME == null)) {
                 throw new global::System.ArgumentNullException("Original_NOME");
@@ -1257,21 +1389,37 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
                 this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Original_MES == null)) {
+            if ((Original_FUNCAO == null)) {
                 this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((string)(Original_MES));
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((string)(Original_FUNCAO));
             }
-            if ((Original_FUNCAO == null)) {
+            if ((Original_GENDER == null)) {
                 this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((string)(Original_FUNCAO));
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((string)(Original_GENDER));
+            }
+            if ((Original_PAGAMENTO == null)) {
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((string)(Original_PAGAMENTO));
+            }
+            if ((Original_VENCIMENTO == null)) {
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((string)(Original_VENCIMENTO));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1293,7 +1441,7 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string NOME, string CPF, string SETOR, string SOCIO, string DATAS, global::System.Nullable<global::System.TimeSpan> HORA, string MES, string FUNCAO) {
+        public virtual int Insert(string NOME, string CPF, string SETOR, string SOCIO, string DATAS, global::System.Nullable<global::System.TimeSpan> HORA, string FUNCAO, string GENDER, byte[] FOTO, string PAGAMENTO, string VENCIMENTO) {
             if ((NOME == null)) {
                 throw new global::System.ArgumentNullException("NOME");
             }
@@ -1330,17 +1478,35 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((MES == null)) {
+            if ((FUNCAO == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(MES));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(FUNCAO));
             }
-            if ((FUNCAO == null)) {
+            if ((GENDER == null)) {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(FUNCAO));
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(GENDER));
+            }
+            if ((FOTO == null)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((byte[])(FOTO));
+            }
+            if ((PAGAMENTO == null)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(PAGAMENTO));
+            }
+            if ((VENCIMENTO == null)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(VENCIMENTO));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1369,8 +1535,11 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
                     string SOCIO, 
                     string DATAS, 
                     global::System.Nullable<global::System.TimeSpan> HORA, 
-                    string MES, 
                     string FUNCAO, 
+                    string GENDER, 
+                    byte[] FOTO, 
+                    string PAGAMENTO, 
+                    string VENCIMENTO, 
                     int Original_ID, 
                     string Original_NOME, 
                     string Original_CPF, 
@@ -1378,8 +1547,10 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
                     string Original_SOCIO, 
                     string Original_DATAS, 
                     global::System.Nullable<global::System.TimeSpan> Original_HORA, 
-                    string Original_MES, 
                     string Original_FUNCAO, 
+                    string Original_GENDER, 
+                    string Original_PAGAMENTO, 
+                    string Original_VENCIMENTO, 
                     int ID) {
             if ((NOME == null)) {
                 throw new global::System.ArgumentNullException("NOME");
@@ -1417,82 +1588,116 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((MES == null)) {
+            if ((FUNCAO == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(MES));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(FUNCAO));
             }
-            if ((FUNCAO == null)) {
+            if ((GENDER == null)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(FUNCAO));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(GENDER));
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_ID));
+            if ((FOTO == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((byte[])(FOTO));
+            }
+            if ((PAGAMENTO == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(PAGAMENTO));
+            }
+            if ((VENCIMENTO == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(VENCIMENTO));
+            }
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_ID));
             if ((Original_NOME == null)) {
                 throw new global::System.ArgumentNullException("Original_NOME");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_NOME));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_NOME));
             }
             if ((Original_CPF == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_CPF));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_CPF));
             }
             if ((Original_SETOR == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_SETOR));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_SETOR));
             }
             if ((Original_SOCIO == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_SOCIO));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_SOCIO));
             }
             if ((Original_DATAS == null)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_DATAS));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_DATAS));
             }
             if ((Original_HORA.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((System.TimeSpan)(Original_HORA.Value));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((System.TimeSpan)(Original_HORA.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
-            }
-            if ((Original_MES == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_MES));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             if ((Original_FUNCAO == null)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_FUNCAO));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_FUNCAO));
             }
-            this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(ID));
+            if ((Original_GENDER == null)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_GENDER));
+            }
+            if ((Original_PAGAMENTO == null)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_PAGAMENTO));
+            }
+            if ((Original_VENCIMENTO == null)) {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_VENCIMENTO));
+            }
+            this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1520,8 +1725,11 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
                     string SOCIO, 
                     string DATAS, 
                     global::System.Nullable<global::System.TimeSpan> HORA, 
-                    string MES, 
                     string FUNCAO, 
+                    string GENDER, 
+                    byte[] FOTO, 
+                    string PAGAMENTO, 
+                    string VENCIMENTO, 
                     int Original_ID, 
                     string Original_NOME, 
                     string Original_CPF, 
@@ -1529,9 +1737,11 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
                     string Original_SOCIO, 
                     string Original_DATAS, 
                     global::System.Nullable<global::System.TimeSpan> Original_HORA, 
-                    string Original_MES, 
-                    string Original_FUNCAO) {
-            return this.Update(NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO, Original_ID, Original_NOME, Original_CPF, Original_SETOR, Original_SOCIO, Original_DATAS, Original_HORA, Original_MES, Original_FUNCAO, Original_ID);
+                    string Original_FUNCAO, 
+                    string Original_GENDER, 
+                    string Original_PAGAMENTO, 
+                    string Original_VENCIMENTO) {
+            return this.Update(NOME, CPF, SETOR, SOCIO, DATAS, HORA, FUNCAO, GENDER, FOTO, PAGAMENTO, VENCIMENTO, Original_ID, Original_NOME, Original_CPF, Original_SETOR, Original_SOCIO, Original_DATAS, Original_HORA, Original_FUNCAO, Original_GENDER, Original_PAGAMENTO, Original_VENCIMENTO, Original_ID);
         }
     }
     
@@ -1547,7 +1757,7 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
         
         private UpdateOrderOption _updateOrder;
         
-        private PRESENCATableAdapter _pRESENCATableAdapter;
+        private PORTARIATableAdapter _pORTARIATableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1569,12 +1779,12 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public PRESENCATableAdapter PRESENCATableAdapter {
+        public PORTARIATableAdapter PORTARIATableAdapter {
             get {
-                return this._pRESENCATableAdapter;
+                return this._pORTARIATableAdapter;
             }
             set {
-                this._pRESENCATableAdapter = value;
+                this._pORTARIATableAdapter = value;
             }
         }
         
@@ -1597,9 +1807,9 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._pRESENCATableAdapter != null) 
-                            && (this._pRESENCATableAdapter.Connection != null))) {
-                    return this._pRESENCATableAdapter.Connection;
+                if (((this._pORTARIATableAdapter != null) 
+                            && (this._pORTARIATableAdapter.Connection != null))) {
+                    return this._pORTARIATableAdapter.Connection;
                 }
                 return null;
             }
@@ -1614,7 +1824,7 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._pRESENCATableAdapter != null)) {
+                if ((this._pORTARIATableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1626,14 +1836,14 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(BDCADASTRODataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(BDCADASTRODataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._pRESENCATableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.PRESENCA.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._pORTARIATableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.PORTARIA.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._pRESENCATableAdapter.Update(updatedRows));
+                    result = (result + this._pORTARIATableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1645,13 +1855,13 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(BDCADASTRODataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(BDCADASTRODataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._pRESENCATableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.PRESENCA.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._pORTARIATableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.PORTARIA.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._pRESENCATableAdapter.Update(addedRows));
+                    result = (result + this._pORTARIATableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1663,13 +1873,13 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(BDCADASTRODataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(BDCADASTRODataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._pRESENCATableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.PRESENCA.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._pORTARIATableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.PORTARIA.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._pRESENCATableAdapter.Update(deletedRows));
+                    result = (result + this._pORTARIATableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1705,15 +1915,15 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(BDCADASTRODataSet dataSet) {
+        public virtual int UpdateAll(BDCADASTRODataSet2 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._pRESENCATableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._pRESENCATableAdapter.Connection) == false))) {
+            if (((this._pORTARIATableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._pORTARIATableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Todos os TableAdapters gerenciados por um TableAdapterManager devem usar a mesma " +
                         "cadeia de conexão.");
             }
@@ -1749,13 +1959,13 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._pRESENCATableAdapter != null)) {
-                    revertConnections.Add(this._pRESENCATableAdapter, this._pRESENCATableAdapter.Connection);
-                    this._pRESENCATableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._pRESENCATableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._pRESENCATableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._pRESENCATableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._pRESENCATableAdapter.Adapter);
+                if ((this._pORTARIATableAdapter != null)) {
+                    revertConnections.Add(this._pORTARIATableAdapter, this._pORTARIATableAdapter.Connection);
+                    this._pORTARIATableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._pORTARIATableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._pORTARIATableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._pORTARIATableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._pORTARIATableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1816,9 +2026,9 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._pRESENCATableAdapter != null)) {
-                    this._pRESENCATableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._pRESENCATableAdapter]));
-                    this._pRESENCATableAdapter.Transaction = null;
+                if ((this._pORTARIATableAdapter != null)) {
+                    this._pORTARIATableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._pORTARIATableAdapter]));
+                    this._pORTARIATableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

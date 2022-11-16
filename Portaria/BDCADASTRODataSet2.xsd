@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="BDCADASTRODataSet" targetNamespace="http://tempuri.org/BDCADASTRODataSet.xsd" xmlns:mstns="http://tempuri.org/BDCADASTRODataSet.xsd" xmlns="http://tempuri.org/BDCADASTRODataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="BDCADASTRODataSet2" targetNamespace="http://tempuri.org/BDCADASTRODataSet2.xsd" xmlns:mstns="http://tempuri.org/BDCADASTRODataSet2.xsd" xmlns="http://tempuri.org/BDCADASTRODataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BDCADASTROConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BDCADASTROConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Portaria.Properties.Settings.GlobalReference.Default.BDCADASTROConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BDCADASTROConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BDCADASTROConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Portaria.Properties.Settings.GlobalReference.Default.BDCADASTROConnectionString1" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PRESENCATableAdapter" GeneratorDataComponentClassName="PRESENCATableAdapter" Name="PRESENCA" UserDataComponentName="PRESENCATableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PORTARIATableAdapter" GeneratorDataComponentClassName="PORTARIATableAdapter" Name="PORTARIA" UserDataComponentName="PORTARIATableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="BDCADASTROConnectionString (Settings)" DbObjectName="BDCADASTRO.dbo.PRESENCA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="BDCADASTROConnectionString1 (Settings)" DbObjectName="BDCADASTRO.dbo.PORTARIA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [dbo].[PRESENCA] WHERE (([ID] = @Original_ID) AND ([NOME] = @Original_NOME) AND ((@IsNull_CPF = 1 AND [CPF] IS NULL) OR ([CPF] = @Original_CPF)) AND ((@IsNull_SETOR = 1 AND [SETOR] IS NULL) OR ([SETOR] = @Original_SETOR)) AND ((@IsNull_SOCIO = 1 AND [SOCIO] IS NULL) OR ([SOCIO] = @Original_SOCIO)) AND ((@IsNull_DATAS = 1 AND [DATAS] IS NULL) OR ([DATAS] = @Original_DATAS)) AND ((@IsNull_HORA = 1 AND [HORA] IS NULL) OR ([HORA] = @Original_HORA)) AND ((@IsNull_MES = 1 AND [MES] IS NULL) OR ([MES] = @Original_MES)) AND ((@IsNull_FUNCAO = 1 AND [FUNCAO] IS NULL) OR ([FUNCAO] = @Original_FUNCAO)))</CommandText>
+                    <CommandText>DELETE FROM [dbo].[PORTARIA] WHERE (([ID] = @Original_ID) AND ([NOME] = @Original_NOME) AND ((@IsNull_CPF = 1 AND [CPF] IS NULL) OR ([CPF] = @Original_CPF)) AND ((@IsNull_SETOR = 1 AND [SETOR] IS NULL) OR ([SETOR] = @Original_SETOR)) AND ((@IsNull_SOCIO = 1 AND [SOCIO] IS NULL) OR ([SOCIO] = @Original_SOCIO)) AND ((@IsNull_DATAS = 1 AND [DATAS] IS NULL) OR ([DATAS] = @Original_DATAS)) AND ((@IsNull_HORA = 1 AND [HORA] IS NULL) OR ([HORA] = @Original_HORA)) AND ((@IsNull_FUNCAO = 1 AND [FUNCAO] IS NULL) OR ([FUNCAO] = @Original_FUNCAO)) AND ((@IsNull_GENDER = 1 AND [GENDER] IS NULL) OR ([GENDER] = @Original_GENDER)) AND ((@IsNull_PAGAMENTO = 1 AND [PAGAMENTO] IS NULL) OR ([PAGAMENTO] = @Original_PAGAMENTO)) AND ((@IsNull_VENCIMENTO = 1 AND [VENCIMENTO] IS NULL) OR ([VENCIMENTO] = @Original_VENCIMENTO)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_NOME" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="NOME" SourceColumnNullMapping="false" SourceVersion="Original" />
@@ -26,17 +26,21 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_DATAS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DATAS" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_HORA" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HORA" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Time" Direction="Input" ParameterName="@Original_HORA" Precision="0" ProviderType="Time" Scale="0" Size="0" SourceColumn="HORA" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MES" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MES" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_MES" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="MES" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FUNCAO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FUNCAO" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_FUNCAO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="FUNCAO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GENDER" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GENDER" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_GENDER" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GENDER" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PAGAMENTO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PAGAMENTO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_PAGAMENTO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PAGAMENTO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_VENCIMENTO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="VENCIMENTO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_VENCIMENTO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="VENCIMENTO" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[PRESENCA] ([NOME], [CPF], [SETOR], [SOCIO], [DATAS], [HORA], [MES], [FUNCAO]) VALUES (@NOME, @CPF, @SETOR, @SOCIO, @DATAS, @HORA, @MES, @FUNCAO);
-SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE (ID = SCOPE_IDENTITY())</CommandText>
+                    <CommandText>INSERT INTO [dbo].[PORTARIA] ([NOME], [CPF], [SETOR], [SOCIO], [DATAS], [HORA], [FUNCAO], [GENDER], [FOTO], [PAGAMENTO], [VENCIMENTO]) VALUES (@NOME, @CPF, @SETOR, @SOCIO, @DATAS, @HORA, @FUNCAO, @GENDER, @FOTO, @PAGAMENTO, @VENCIMENTO);
+SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, FUNCAO, GENDER, FOTO, PAGAMENTO, VENCIMENTO FROM PORTARIA WHERE (ID = SCOPE_IDENTITY())</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@NOME" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="NOME" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@CPF" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CPF" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -44,23 +48,24 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SOCIO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SOCIO" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@DATAS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DATAS" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Time" Direction="Input" ParameterName="@HORA" Precision="0" ProviderType="Time" Scale="0" Size="0" SourceColumn="HORA" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@MES" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="MES" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@FUNCAO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="FUNCAO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@GENDER" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GENDER" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@FOTO" Precision="0" ProviderType="Image" Scale="0" Size="0" SourceColumn="FOTO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@PAGAMENTO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PAGAMENTO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@VENCIMENTO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="VENCIMENTO" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM dbo.PRESENCA where PRESENCA.MES like '%'+@Mês+'%' </CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="Mês" ColumnName="MES" DataSourceName="BDCADASTRO.dbo.PRESENCA" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@Mês" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="MES" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, FUNCAO, GENDER, FOTO, PAGAMENTO, VENCIMENTO FROM dbo.PORTARIA</CommandText>
+                    <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [dbo].[PRESENCA] SET [NOME] = @NOME, [CPF] = @CPF, [SETOR] = @SETOR, [SOCIO] = @SOCIO, [DATAS] = @DATAS, [HORA] = @HORA, [MES] = @MES, [FUNCAO] = @FUNCAO WHERE (([ID] = @Original_ID) AND ([NOME] = @Original_NOME) AND ((@IsNull_CPF = 1 AND [CPF] IS NULL) OR ([CPF] = @Original_CPF)) AND ((@IsNull_SETOR = 1 AND [SETOR] IS NULL) OR ([SETOR] = @Original_SETOR)) AND ((@IsNull_SOCIO = 1 AND [SOCIO] IS NULL) OR ([SOCIO] = @Original_SOCIO)) AND ((@IsNull_DATAS = 1 AND [DATAS] IS NULL) OR ([DATAS] = @Original_DATAS)) AND ((@IsNull_HORA = 1 AND [HORA] IS NULL) OR ([HORA] = @Original_HORA)) AND ((@IsNull_MES = 1 AND [MES] IS NULL) OR ([MES] = @Original_MES)) AND ((@IsNull_FUNCAO = 1 AND [FUNCAO] IS NULL) OR ([FUNCAO] = @Original_FUNCAO)));
-SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE (ID = @ID)</CommandText>
+                    <CommandText>UPDATE [dbo].[PORTARIA] SET [NOME] = @NOME, [CPF] = @CPF, [SETOR] = @SETOR, [SOCIO] = @SOCIO, [DATAS] = @DATAS, [HORA] = @HORA, [FUNCAO] = @FUNCAO, [GENDER] = @GENDER, [FOTO] = @FOTO, [PAGAMENTO] = @PAGAMENTO, [VENCIMENTO] = @VENCIMENTO WHERE (([ID] = @Original_ID) AND ([NOME] = @Original_NOME) AND ((@IsNull_CPF = 1 AND [CPF] IS NULL) OR ([CPF] = @Original_CPF)) AND ((@IsNull_SETOR = 1 AND [SETOR] IS NULL) OR ([SETOR] = @Original_SETOR)) AND ((@IsNull_SOCIO = 1 AND [SOCIO] IS NULL) OR ([SOCIO] = @Original_SOCIO)) AND ((@IsNull_DATAS = 1 AND [DATAS] IS NULL) OR ([DATAS] = @Original_DATAS)) AND ((@IsNull_HORA = 1 AND [HORA] IS NULL) OR ([HORA] = @Original_HORA)) AND ((@IsNull_FUNCAO = 1 AND [FUNCAO] IS NULL) OR ([FUNCAO] = @Original_FUNCAO)) AND ((@IsNull_GENDER = 1 AND [GENDER] IS NULL) OR ([GENDER] = @Original_GENDER)) AND ((@IsNull_PAGAMENTO = 1 AND [PAGAMENTO] IS NULL) OR ([PAGAMENTO] = @Original_PAGAMENTO)) AND ((@IsNull_VENCIMENTO = 1 AND [VENCIMENTO] IS NULL) OR ([VENCIMENTO] = @Original_VENCIMENTO)));
+SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, FUNCAO, GENDER, FOTO, PAGAMENTO, VENCIMENTO FROM PORTARIA WHERE (ID = @ID)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@NOME" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="NOME" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@CPF" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CPF" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -68,8 +73,11 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SOCIO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SOCIO" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@DATAS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DATAS" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Time" Direction="Input" ParameterName="@HORA" Precision="0" ProviderType="Time" Scale="0" Size="0" SourceColumn="HORA" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@MES" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="MES" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@FUNCAO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="FUNCAO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@GENDER" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GENDER" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@FOTO" Precision="0" ProviderType="Image" Scale="0" Size="0" SourceColumn="FOTO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@PAGAMENTO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PAGAMENTO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@VENCIMENTO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="VENCIMENTO" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_NOME" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="NOME" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CPF" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CPF" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -82,11 +90,15 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_DATAS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DATAS" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_HORA" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HORA" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Time" Direction="Input" ParameterName="@Original_HORA" Precision="0" ProviderType="Time" Scale="0" Size="0" SourceColumn="HORA" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_MES" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="MES" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_MES" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="MES" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FUNCAO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FUNCAO" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_FUNCAO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="FUNCAO" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="BDCADASTRO.dbo.PRESENCA" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GENDER" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GENDER" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_GENDER" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GENDER" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PAGAMENTO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PAGAMENTO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_PAGAMENTO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PAGAMENTO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_VENCIMENTO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="VENCIMENTO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_VENCIMENTO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="VENCIMENTO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="BDCADASTRO.dbo.PORTARIA" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -100,8 +112,11 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
               <Mapping SourceColumn="SOCIO" DataSetColumn="SOCIO" />
               <Mapping SourceColumn="DATAS" DataSetColumn="DATAS" />
               <Mapping SourceColumn="HORA" DataSetColumn="HORA" />
-              <Mapping SourceColumn="MES" DataSetColumn="MES" />
               <Mapping SourceColumn="FUNCAO" DataSetColumn="FUNCAO" />
+              <Mapping SourceColumn="GENDER" DataSetColumn="GENDER" />
+              <Mapping SourceColumn="FOTO" DataSetColumn="FOTO" />
+              <Mapping SourceColumn="PAGAMENTO" DataSetColumn="PAGAMENTO" />
+              <Mapping SourceColumn="VENCIMENTO" DataSetColumn="VENCIMENTO" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -110,17 +125,17 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="BDCADASTRODataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="BDCADASTRODataSet" msprop:Generator_UserDSName="BDCADASTRODataSet">
+  <xs:element name="BDCADASTRODataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="BDCADASTRODataSet2" msprop:Generator_UserDSName="BDCADASTRODataSet2">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="PRESENCA" msprop:Generator_TableClassName="PRESENCADataTable" msprop:Generator_TableVarName="tablePRESENCA" msprop:Generator_RowChangedName="PRESENCARowChanged" msprop:Generator_TablePropName="PRESENCA" msprop:Generator_RowDeletingName="PRESENCARowDeleting" msprop:Generator_RowChangingName="PRESENCARowChanging" msprop:Generator_RowEvHandlerName="PRESENCARowChangeEventHandler" msprop:Generator_RowDeletedName="PRESENCARowDeleted" msprop:Generator_RowClassName="PRESENCARow" msprop:Generator_UserTableName="PRESENCA" msprop:Generator_RowEvArgName="PRESENCARowChangeEvent">
+        <xs:element name="PORTARIA" msprop:Generator_TableClassName="PORTARIADataTable" msprop:Generator_TableVarName="tablePORTARIA" msprop:Generator_TablePropName="PORTARIA" msprop:Generator_RowDeletingName="PORTARIARowDeleting" msprop:Generator_RowChangingName="PORTARIARowChanging" msprop:Generator_RowEvHandlerName="PORTARIARowChangeEventHandler" msprop:Generator_RowDeletedName="PORTARIARowDeleted" msprop:Generator_UserTableName="PORTARIA" msprop:Generator_RowChangedName="PORTARIARowChanged" msprop:Generator_RowEvArgName="PORTARIARowChangeEvent" msprop:Generator_RowClassName="PORTARIARow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
               <xs:element name="NOME" msprop:Generator_ColumnVarNameInTable="columnNOME" msprop:Generator_ColumnPropNameInRow="NOME" msprop:Generator_ColumnPropNameInTable="NOMEColumn" msprop:Generator_UserColumnName="NOME">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="100" />
+                    <xs:maxLength value="80" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -153,17 +168,32 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
                 </xs:simpleType>
               </xs:element>
               <xs:element name="HORA" msprop:Generator_ColumnVarNameInTable="columnHORA" msprop:Generator_ColumnPropNameInRow="HORA" msprop:Generator_ColumnPropNameInTable="HORAColumn" msprop:Generator_UserColumnName="HORA" type="xs:duration" minOccurs="0" />
-              <xs:element name="MES" msprop:Generator_ColumnVarNameInTable="columnMES" msprop:Generator_ColumnPropNameInRow="MES" msprop:Generator_ColumnPropNameInTable="MESColumn" msprop:Generator_UserColumnName="MES" minOccurs="0">
+              <xs:element name="FUNCAO" msprop:Generator_ColumnVarNameInTable="columnFUNCAO" msprop:Generator_ColumnPropNameInRow="FUNCAO" msprop:Generator_ColumnPropNameInTable="FUNCAOColumn" msprop:Generator_UserColumnName="FUNCAO" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="FUNCAO" msprop:Generator_ColumnVarNameInTable="columnFUNCAO" msprop:Generator_ColumnPropNameInRow="FUNCAO" msprop:Generator_ColumnPropNameInTable="FUNCAOColumn" msprop:Generator_UserColumnName="FUNCAO" minOccurs="0">
+              <xs:element name="GENDER" msprop:Generator_ColumnVarNameInTable="columnGENDER" msprop:Generator_ColumnPropNameInRow="GENDER" msprop:Generator_ColumnPropNameInTable="GENDERColumn" msprop:Generator_UserColumnName="GENDER" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FOTO" msprop:Generator_ColumnVarNameInTable="columnFOTO" msprop:Generator_ColumnPropNameInRow="FOTO" msprop:Generator_ColumnPropNameInTable="FOTOColumn" msprop:Generator_UserColumnName="FOTO" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="PAGAMENTO" msprop:Generator_ColumnVarNameInTable="columnPAGAMENTO" msprop:Generator_ColumnPropNameInRow="PAGAMENTO" msprop:Generator_ColumnPropNameInTable="PAGAMENTOColumn" msprop:Generator_UserColumnName="PAGAMENTO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VENCIMENTO" msprop:Generator_ColumnVarNameInTable="columnVENCIMENTO" msprop:Generator_ColumnPropNameInRow="VENCIMENTO" msprop:Generator_ColumnPropNameInTable="VENCIMENTOColumn" msprop:Generator_UserColumnName="VENCIMENTO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -173,7 +203,7 @@ SELECT ID, NOME, CPF, SETOR, SOCIO, DATAS, HORA, MES, FUNCAO FROM PRESENCA WHERE
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:PRESENCA" />
+      <xs:selector xpath=".//mstns:PORTARIA" />
       <xs:field xpath="mstns:ID" />
     </xs:unique>
   </xs:element>

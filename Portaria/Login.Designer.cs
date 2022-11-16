@@ -54,10 +54,6 @@
             // 
             this.textnome.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.textnome.FormattingEnabled = true;
-            this.textnome.Items.AddRange(new object[] {
-            "Rodrigo",
-            "Carmi",
-            "Admin"});
             this.textnome.Location = new System.Drawing.Point(332, 49);
             this.textnome.Name = "textnome";
             this.textnome.Size = new System.Drawing.Size(166, 21);

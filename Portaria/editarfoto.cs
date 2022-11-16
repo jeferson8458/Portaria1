@@ -122,7 +122,7 @@ namespace Portaria
                 textBox2.Focus();
                 return;
             }
-            string sql = "UPDATE login SET SENHA=@Senha, FOTOS=@Foto WHERE ID = @Id";
+            string sql = "UPDATE login SET senha=@Senha, fotos=@Foto WHERE id = @Id";
 
             SqlConnection con = new SqlConnection(connectionString);
             SqlCommand cmd = new SqlCommand(sql, con);

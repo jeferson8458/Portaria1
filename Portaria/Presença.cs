@@ -17,6 +17,9 @@ namespace Portaria
 {
     public partial class Presença : Form
     {
+        SqlDataAdapter pageAdapter;
+        DataSet pageDS;
+        int scollVal;
         public byte[] FOTO { get; set; }
         string connectionString = @"Data Source=DESKTOP-6TOVA5C\SQLEXPRESS;Initial Catalog=BDCADASTRO;Integrated Security=True";
         bool novo4;
@@ -91,8 +94,8 @@ namespace Portaria
 
             }
 
-            dataGridView1.FirstDisplayedScrollingRowIndex = dataGridView1.Rows.GetLastRow(DataGridViewElementStates.Visible);
-            dataGridView1.CurrentCell = dataGridView1.Rows[dataGridView1.Rows.Count - 1].Cells[0];
+            //bunifuDataGridView1.FirstDisplayedScrollingRowIndex = bunifuDataGridView1.Rows.GetLastRow(DataGridViewElementStates.Visible);
+            //bunifuDataGridView1.CurrentCell = bunifuDataGridView1.Rows[bunifuDataGridView1.Rows.Count - 1].Cells[0];
 
 
             Dispositivo = new FilterInfoCollection(FilterCategory.VideoInputDevice);
@@ -334,6 +337,7 @@ namespace Portaria
             txtId.Text = "";
             txtNome2.Text = "";
             txtCPF2.Text = "";
+            textBox1.Text = "";
             radioButton1.Checked = false;
             radioButton2.Checked = false;
             comboSetor2.SelectedIndex = -1;
@@ -389,6 +393,7 @@ namespace Portaria
             txtCPF2.Text = "";
             txtdata2.Text = "";
             txthora2.Text = "";
+            textBox1.Text = "";
             comboSetor2.SelectedIndex = -1;
             comboSocio2.SelectedIndex = -1;
             radioButton1.Checked = false;
@@ -397,11 +402,11 @@ namespace Portaria
             pictureBox1.Image = pictureBox1.InitialImage;
             txtId.Focus();
             atualizartodalista();
-            dataGridView1.FirstDisplayedCell = dataGridView1.Rows[dataGridView1.Rows.Count - 1].Cells[0];
+            //dataGridView1.FirstDisplayedCell = dataGridView1.Rows[dataGridView1.Rows.Count - 1].Cells[0];
         }
         private void atualizartodalista()
         {
-
+            
             tsbSalvar.Enabled = true;
             tsbCancelar.Enabled = true;
             txtId.Enabled = true;
@@ -415,23 +420,33 @@ namespace Portaria
             radioButton1.Checked = false;
             radioButton2.Checked = false;
 
-            cn.Open();
-            SqlCommand cmd = cn.CreateCommand();
-            cmd.CommandText = "Select * FROM PORTARIA";
-            cmd.ExecuteNonQuery();
+            string constr = @"Data Source=DESKTOP-6TOVA5C\SQLEXPRESS;Initial Catalog=BDCADASTRO;Integrated Security=True";
+            SqlConnection con = new SqlConnection(constr);
+            con.Open();
+            pageAdapter = new SqlDataAdapter("Select * FROM PORTARIA", con);
+            pageDS = new DataSet();
+            pageAdapter.Fill(pageDS, scollVal, 10, "contomeres");
+            con.Close();
+            dataGridView1.DataSource = pageDS;
+            dataGridView1.DataMember = "contomeres";
 
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            //cn.Open();
+            //SqlCommand cmd = cn.CreateCommand();
+            //cmd.CommandText = "Select * FROM PORTARIA";
+            //cmd.ExecuteNonQuery();
 
-            da.Fill(dt);
+            //DataTable dt = new DataTable();
+            //SqlDataAdapter da = new SqlDataAdapter(cmd);
 
-            dataGridView1.DataSource = dt;
+            //da.Fill(dt);
 
-            cn.Close();
+            //bunifuDataGridView1.DataSource = dt;
 
-            SqlConnection con = new SqlConnection(connectionString);
-            cmd.CommandType = CommandType.Text;
-            dataGridView1.Columns[0].Width = 22;
+            //cn.Close();
+
+            //SqlConnection con = new SqlConnection(connectionString);
+            //cmd.CommandType = CommandType.Text;
+            //dataGridView1.Columns[0].Width = 22;
 
             novo4 = true;
 
@@ -922,7 +937,7 @@ namespace Portaria
                 con.Close();
             }
 
-            atualizartodalista();
+            //atualizartodalista();
             button1.Enabled = false;
             button2.Enabled = false;
             button3.Enabled = false;
@@ -1019,7 +1034,7 @@ namespace Portaria
 
             if (novo2)
             {
-                string sql = "INSERT INTO PORTARIA (NOME,CPF,SETOR,SOCIO,DATAS,HORA,FUNCAO, DATA_PAGAMENTO, DATA_VENCIMENTO) " + "VALUES (@Nome, @Cpf, @Setor, @Socio, @Data, @Hora, @Funcao, @Pagamento, @Vencimento)";
+                string sql = "INSERT INTO PORTARIA (NOME,CPF,SETOR,SOCIO,DATAS,HORA,FUNCAO, PAGAMENTO, VENCIMENTO) " + "VALUES (@Nome, @Cpf, @Setor, @Socio, @Data, @Hora, @Funcao, @Pagamento, @Vencimento)";
 
                 SqlConnection con = new SqlConnection(connectionString);
                 SqlCommand cmd = new SqlCommand(sql, con);
@@ -1052,7 +1067,7 @@ namespace Portaria
             }
             else
             {
-                string sql = "UPDATE PORTARIA SET NOME = @Nome, CPF = @Cpf, SETOR = @Setor, SOCIO = @Socio, DATAS = @Data, " + " HORA = @Hora, FUNCAO = @Funcao, GENDER=@Gender, FOTO=@Foto, DATA_PAGAMENTO=@Pagamento, DATA_VENCIMENTO=@Vencimento WHERE ID = @Id";
+                string sql = "UPDATE PORTARIA SET NOME = @Nome, CPF = @Cpf, SETOR = @Setor, SOCIO = @Socio, DATAS = @Data, " + " HORA = @Hora, FUNCAO = @Funcao, GENDER=@Gender, FOTO=@Foto, PAGAMENTO=@Pagamento, VENCIMENTO=@Vencimento WHERE ID = @Id";
                 SqlConnection con = new SqlConnection(connectionString);
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@Id", txtId.Text);
@@ -1157,5 +1172,122 @@ namespace Portaria
                 dateTimePicker4.Visible = false;
             }
         }
+
+        private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void bunifuDataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string sql = "SELECT * FROM PORTARIA WHERE ID=@Id";
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@Id", dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+            SqlDataReader reader;
+            con.Open();
+            try
+            {
+                reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    tsbEditar.Enabled = true;
+                    tsbCancelar.Enabled = true;
+                    button2.Enabled = true;
+                    button1.Enabled = true;
+                    tsbSalvar.Enabled = true;
+                    txtNome2.Enabled = false;
+                    tsbCancelar.Enabled = true;
+                    txtCPF2.Enabled = false;
+                    comboSetor2.Enabled = false;
+                    comboSocio2.Enabled = false;
+                    txtCPF2.Enabled = false;
+                    comboSetor2.Enabled = true;
+                    comboSocio2.Enabled = false;
+                    comboFU.Enabled = false;
+                    txtId.Text = "";
+                    txtNome2.Text = "";
+                    txtCPF2.Text = "";
+                    txtdata2.Text = "";
+                    txthora2.Text = "";
+                    radioButton1.Checked = false;
+                    radioButton2.Checked = false;
+                    comboSetor2.SelectedIndex = -1;
+                    comboSocio2.SelectedIndex = -1;
+                    comboFU.SelectedIndex = -1;
+                    txtNome2.Focus();
+                    string genero = reader["GENDER"].ToString();
+                    switch (genero)
+                    {
+                        case "1":
+                            radioButton1.Checked = true;//cpf
+                            radioButton2.Checked = false;
+                            txtCPF2.Mask = radioButton1.Checked ? @"000\.000\.000\-00" : @"00\.000\.000\-0";
+                            break;
+                        case "0":
+                            radioButton2.Checked = true;//RG
+                            radioButton1.Checked = false;
+                            txtCPF2.Mask = radioButton1.Checked ? @"000\.000\.000\-00" : @"00\.000\.000\-0";
+                            break;
+
+                    }
+                    txtId.Text = reader[0].ToString();
+                    txtid02.Text = reader[0].ToString();
+                    txtNome2.Text = reader[1].ToString();
+                    txtCPF2.Text = reader[2].ToString();
+                    comboSetor2.Text = reader[3].ToString();
+                    comboSocio2.Text = reader[4].ToString();
+                    txtdata2.Text = reader[5].ToString();
+                    txthora2.Text = reader[6].ToString();
+                    comboFU.Text = reader[7].ToString();
+                    dateTimePicker3.Text = reader[10].ToString();
+                    dateTimePicker4.Text = reader[11].ToString();
+                    try
+                    {
+                        if (pictureBox1.Image != null)
+                        {
+                            pictureBox1.Image = ConverterFotoParaByteArray2((byte[])reader[9]);
+                        }
+                        else
+                        {
+                            pictureBox1.Image = pictureBox1.InitialImage;
+                        }
+
+                    }
+                    catch
+                    {
+                        pictureBox1.Image = pictureBox1.InitialImage;
+                    }
+
+                    if (comboSetor2.Text == "PILATES/DANCA")
+                    {
+                        label14.Visible = true;
+                        label15.Visible = true;
+                        dateTimePicker3.Visible = true;
+                        dateTimePicker4.Visible = true;
+                    }
+                    else
+                    {
+                        label14.Visible = false;
+                        label15.Visible = false;
+                        dateTimePicker3.Visible = false;
+                        dateTimePicker4.Visible = false;
+                    }
+
+                }
+                else
+                    MessageBox.Show("Nenhum registro encontrado com o Id informado!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
+        
+    }
     }
 }

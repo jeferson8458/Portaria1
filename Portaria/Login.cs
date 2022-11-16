@@ -55,12 +55,37 @@ namespace Portaria
         }
         private void Login_Load(object sender, EventArgs e)
         {
+
+            string scon = @"Data Source=DESKTOP-6TOVA5C\SQLEXPRESS;Initial Catalog=Login;Integrated Security=True";
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlCommand cmd = new SqlCommand(scon, con);
+            try
+            {
+                con.Open();
+            }
+            catch (SqlException sqle)
+            {
+                MessageBox.Show("Falha ao efetuar a conexão. Erro:");
+            }
+            String scom = "select * from login";
+            SqlDataAdapter da = new SqlDataAdapter(scom, con);
+            DataTable dtResultado = new DataTable();
+            //dtResultado.Clear(); //o ponto mais importante (limpa a table antes de preenche-la)
+            textnome.DataSource = null;
+            da.Fill(dtResultado);
+            textnome.DataSource = dtResultado;
+            textnome.ValueMember = "id";
+            textnome.DisplayMember = "usuario";
+            textnome.SelectedItem = "";
+
             textnome.Focus();
             this.AcceptButton = button1;
             textnome.Text = "Rodrigo";
 
             label9.Text = DateTime.Now.ToString("dd/MM/yyyy");
             toolStripLabel4.Text = DateTime.Now.ToString("HH:mm");
+
+            testelista();
         }
 
         private bool Logado = false;
@@ -68,6 +93,36 @@ namespace Portaria
         public static string jef2;
         private bool jef;
         private string g;
+
+        private void testelista()
+        {
+            string sql = "SELECT * FROM login WHERE usuario=@Id";
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@Id", textnome.SelectedItem.ToString());
+            SqlDataReader reader;
+            con.Open();
+            try
+            {
+                reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+
+                    textBox1.Text = reader[0].ToString();
+
+                }
+                else;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -200,26 +255,33 @@ namespace Portaria
 
         private void textnome_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (textnome.Text)
-
+            string sql = "SELECT * FROM login WHERE usuario=@Id";
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@Id", textnome.Text.ToString());
+            SqlDataReader reader;
+            con.Open();
+            try
             {
+                reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
 
-                case "Carmi":
+                    textBox1.Text = reader[0].ToString();
 
-                    textBox1.Text = "14";
-                    break;
-
-                case "Rodrigo":
-
-                    textBox1.Text = "10";
-                    break;
-
-                case "Admin":
-
-                    textBox1.Text = "11";
-                    break;
+                }
+                else;
             }
-           
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
+
 
         }
         private void button4_Click(object sender, EventArgs e)
@@ -229,12 +291,12 @@ namespace Portaria
 
         private void textnome_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void textnome_MouseClick(object sender, MouseEventArgs e)
         {
-
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
