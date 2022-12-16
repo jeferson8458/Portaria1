@@ -29,18 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.presencaTableAdapter1 = new Portaria.BDCADASTRODataSetTableAdapters.PRESENCATableAdapter();
+            this.bdcadastroDataSet1 = new Portaria.BDCADASTRODataSet();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.pRESENCABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.jEFERSON = new Portaria.JEFERSON();
-            this.pRESENCATableAdapter = new Portaria.JEFERSONTableAdapters.PRESENCATableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.pRESENCABindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jEFERSON)).BeginInit();
+            this.BDCADASTRODataSet = new Portaria.BDCADASTRODataSet();
+            this.PRESENCABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.PRESENCATableAdapter = new Portaria.BDCADASTRODataSetTableAdapters.PRESENCATableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.bdcadastroDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BDCADASTRODataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PRESENCABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox3
@@ -100,29 +104,41 @@
             this.label4.TabIndex = 69;
             this.label4.Text = "Mês";
             // 
+            // presencaTableAdapter1
+            // 
+            this.presencaTableAdapter1.ClearBeforeFill = true;
+            // 
+            // bdcadastroDataSet1
+            // 
+            this.bdcadastroDataSet1.DataSetName = "BDCADASTRODataSet";
+            this.bdcadastroDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // reportViewer1
             // 
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.PRESENCABindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Portaria.Report1.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 78);
+            this.reportViewer1.Location = new System.Drawing.Point(15, 75);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(776, 485);
+            this.reportViewer1.Size = new System.Drawing.Size(773, 518);
             this.reportViewer1.TabIndex = 70;
-            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load_1);
             // 
-            // pRESENCABindingSource
+            // BDCADASTRODataSet
             // 
-            this.pRESENCABindingSource.DataMember = "PRESENCA";
-            this.pRESENCABindingSource.DataSource = this.jEFERSON;
+            this.BDCADASTRODataSet.DataSetName = "BDCADASTRODataSet";
+            this.BDCADASTRODataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // jEFERSON
+            // PRESENCABindingSource
             // 
-            this.jEFERSON.DataSetName = "JEFERSON";
-            this.jEFERSON.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.PRESENCABindingSource.DataMember = "PRESENCA";
+            this.PRESENCABindingSource.DataSource = this.BDCADASTRODataSet;
             // 
-            // pRESENCATableAdapter
+            // PRESENCATableAdapter
             // 
-            this.pRESENCATableAdapter.ClearBeforeFill = true;
+            this.PRESENCATableAdapter.ClearBeforeFill = true;
             // 
             // Lista
             // 
@@ -140,8 +156,9 @@
             this.Name = "Lista";
             this.Text = "Lista";
             this.Load += new System.EventHandler(this.Lista_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pRESENCABindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jEFERSON)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdcadastroDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BDCADASTRODataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PRESENCABindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,9 +172,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private BDCADASTRODataSetTableAdapters.PRESENCATableAdapter presencaTableAdapter1;
+        private BDCADASTRODataSet bdcadastroDataSet1;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private JEFERSON jEFERSON;
-        private System.Windows.Forms.BindingSource pRESENCABindingSource;
-        private JEFERSONTableAdapters.PRESENCATableAdapter pRESENCATableAdapter;
+        private System.Windows.Forms.BindingSource PRESENCABindingSource;
+        private BDCADASTRODataSet BDCADASTRODataSet;
+        private BDCADASTRODataSetTableAdapters.PRESENCATableAdapter PRESENCATableAdapter;
     }
 }

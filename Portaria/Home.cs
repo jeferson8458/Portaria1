@@ -54,10 +54,12 @@ namespace Portaria
 
             if (label1.Text == "Usuário Admin")
             {
+                button3.Visible = true;
                 button4.Visible = true;
             }
             else
             {
+                button3.Visible = false;
                 button4.Visible = false;
             }
         }
@@ -120,7 +122,7 @@ namespace Portaria
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        public void textBox1_TextChanged(object sender, EventArgs e)
         {
             try
             {
@@ -208,6 +210,11 @@ namespace Portaria
         private void button3_Click_3(object sender, EventArgs e)
         {
        
+        }
+
+        private void button3_Click_4(object sender, EventArgs e)
+        {
+            AbrirHome(new User());
         }
     }
     }

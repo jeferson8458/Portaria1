@@ -288,10 +288,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BDCADASTRODataSet2.Designer.cs">
+    <Compile Include="BDCADASTRODataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BDCADASTRODataSet2.xsd</DependentUpon>
+      <DependentUpon>BDCADASTRODataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Cadastro.cs">
       <SubType>Form</SubType>
@@ -330,19 +330,6 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="JEFERSON.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>JEFERSON.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="JEFERSONDADOS.cs">
-      <DependentUpon>JEFERSONDADOS.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="JEFERSONDADOS.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>JEFERSONDADOS.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Lista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -376,6 +363,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Cadastro.resx">
       <DependentUpon>Cadastro.cs</DependentUpon>
     </EmbeddedResource>
@@ -418,38 +411,19 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Report1.rdlc" />
-    <None Include="BDCADASTRODataSet2.xsc">
-      <DependentUpon>BDCADASTRODataSet2.xsd</DependentUpon>
+    <EmbeddedResource Include="User.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="BDCADASTRODataSet.xsc">
+      <DependentUpon>BDCADASTRODataSet.xsd</DependentUpon>
     </None>
-    <None Include="BDCADASTRODataSet2.xsd">
+    <None Include="BDCADASTRODataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BDCADASTRODataSet2.Designer.cs</LastGenOutput>
+      <LastGenOutput>BDCADASTRODataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="BDCADASTRODataSet2.xss">
-      <DependentUpon>BDCADASTRODataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="JEFERSON.xsc">
-      <DependentUpon>JEFERSON.xsd</DependentUpon>
-    </None>
-    <None Include="JEFERSON.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>JEFERSON.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="JEFERSON.xss">
-      <DependentUpon>JEFERSON.xsd</DependentUpon>
-    </None>
-    <None Include="JEFERSONDADOS.xsc">
-      <DependentUpon>JEFERSONDADOS.xsd</DependentUpon>
-    </None>
-    <None Include="JEFERSONDADOS.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>JEFERSONDADOS.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="JEFERSONDADOS.xss">
-      <DependentUpon>JEFERSONDADOS.xsd</DependentUpon>
+    <None Include="BDCADASTRODataSet.xss">
+      <DependentUpon>BDCADASTRODataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

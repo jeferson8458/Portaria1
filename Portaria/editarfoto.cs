@@ -93,9 +93,54 @@ namespace Portaria
 
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        private void textBox3_TextChanged(string buceta)
         {
+            InitializeComponent();
+            textBox3.Text = buceta;
 
+            string sql = "SELECT * FROM login WHERE ID=@Id";
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@Id", textBox3.Text.ToString());
+            SqlDataReader reader;
+            con.Open();
+            try
+            {
+                reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    textBox3.Text = reader[0].ToString();
+                    textBox1.Text = reader[1].ToString();
+                    try
+                    {
+                        if (fotocirculo1.Image != null)
+                        {
+                            fotocirculo1.Image = ConverterFotoParaByteArray2((byte[])reader[3]);
+                        }
+                        else
+                        {
+                            fotocirculo1.Image = fotocirculo1.InitialImage;
+                        }
+
+                    }
+                    catch
+                    {
+                        fotocirculo1.Image = fotocirculo1.InitialImage;
+                    }
+
+                }
+                else
+                    MessageBox.Show("Nenhum registro encontrado com o Id informado!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.ToString());
+            }
+            finally
+            {
+                con.Close();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -112,22 +157,11 @@ namespace Portaria
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text != string.Empty)
-            {
-
-            }
-            else
-            {
-                MessageBox.Show("Preencha a senha", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                textBox2.Focus();
-                return;
-            }
-            string sql = "UPDATE login SET senha=@Senha, fotos=@Foto WHERE id = @Id";
+            string sql = "UPDATE login SET fotos=@Foto WHERE id = @Id";
 
             SqlConnection con = new SqlConnection(connectionString);
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.Parameters.AddWithValue("@Id", textBox3.Text);
-            cmd.Parameters.AddWithValue("@Senha", textBox2.Text);
             cmd.Parameters.AddWithValue("@Foto", ConverterFotoParaByteArray());
             cmd.CommandType = CommandType.Text;
             con.Open();
@@ -162,7 +196,8 @@ namespace Portaria
 
         private void editarfoto_Load(object sender, EventArgs e)
         {
-
+            textBox3.Enabled = false;
+            textBox1.Enabled = false;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -171,6 +206,11 @@ namespace Portaria
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fotocirculo1_Click(object sender, EventArgs e)
         {
 
         }
